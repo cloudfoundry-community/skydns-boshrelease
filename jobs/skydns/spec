@@ -1,0 +1,14 @@
+---
+name: skydns
+packages:
+- skydns
+templates:
+  bin/skydns_ctl: bin/skydns_ctl
+  bin/monit_debugger: bin/monit_debugger
+  data/properties.sh.erb: data/properties.sh
+  helpers/ctl_setup.sh: helpers/ctl_setup.sh
+  helpers/ctl_utils.sh: helpers/ctl_utils.sh
+properties:
+  skypdns.secret:
+    description: the http api will require an authorization header that matches the secret passed to skydns when it starts
+    default: 'skypdns-boshrelease-secret'

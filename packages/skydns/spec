@@ -1,0 +1,6 @@
+---
+name: skydns
+dependencies:
+- golang
+files:
+- skydns/**/*

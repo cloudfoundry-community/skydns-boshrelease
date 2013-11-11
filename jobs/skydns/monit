@@ -1,0 +1,5 @@
+check process skydns
+  with pidfile /var/vcap/sys/run/skydns/skydns.pid
+  start program "/var/vcap/jobs/skydns/bin/monit_debugger skydns_ctl '/var/vcap/jobs/skydns/bin/skydns_ctl start'"
+  stop program "/var/vcap/jobs/skydns/bin/monit_debugger skydns_ctl '/var/vcap/jobs/skydns/bin/skydns_ctl stop'"
+  group vcap
