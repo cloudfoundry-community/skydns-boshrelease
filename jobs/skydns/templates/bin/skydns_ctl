@@ -35,6 +35,9 @@ case $1 in
          >>$LOG_DIR/$JOB_NAME.stdout.log \
          2>>$LOG_DIR/$JOB_NAME.stderr.log
     else
+      # flush any existing raft logs before joining (else it complains)
+      rm -rf /var/vcap/data/sys/log/skydns/*
+
       exec skydns \
         -http 0.0.0.0:8080 \
         -dns 0.0.0.0:53 \
