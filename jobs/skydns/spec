@@ -14,3 +14,6 @@ properties:
   skydns.secret:
     description: the http api will require an authorization header that matches the secret passed to skydns when it starts
     default: 'skydns-boshrelease-secret'
+  skydns.http_port:
+    description: This is the HTTP port to listen on for API requests
+    default: 8080

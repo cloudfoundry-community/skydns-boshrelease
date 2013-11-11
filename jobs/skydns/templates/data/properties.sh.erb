@@ -9,5 +9,6 @@ export JOB_INDEX=<%= index %>
 # full job name, like redis/0 or webapp/3
 export JOB_FULL="$NAME/$JOB_INDEX"
 
-export SKYDNS_INITIAL_HOST=<%= p("skydns.initial_host") %>
+export SKYDNS_HTTP_PORT=<%= p("skydns.http_port") %>
+export SKYDNS_INITIAL_HOST='<%= p("skydns.initial_host") %>:<%= p("skydns.http_port") %>'
 export SKYDNS_SECRET='<%= p("skydns.secret") %>'
