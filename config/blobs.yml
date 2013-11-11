@@ -1,1 +1,6 @@
---- {}
+---
+golang/go1.1.2.linux-amd64-yacc-shaved.tar.gz:
+  object_id: 037d6642-57af-4f39-a0c1-f83ca563b714
+  sha: !binary |-
+    MDJhYTlmNDdiOTVjZTAxMmI1NzAyZGFmNDFkM2ZmNGI3ODFhYzMwZQ==
+  size: 41768327
