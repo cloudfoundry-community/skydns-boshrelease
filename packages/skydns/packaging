@@ -4,12 +4,13 @@ set -u # report the usage of uninitialized variables
 # Available variables
 # $BOSH_COMPILE_TARGET - where this package & spec'd source files are available
 # $BOSH_INSTALL_TARGET - where you copy/install files to be included in package
-export HOME=/var/vcap
 
+export GOROOT=$(readlink -nf /var/vcap/packages/golang)
+export PATH=/var/vcap/packages/git/bin:$PATH
+export PATH=$GOROOT/bin:$PATH
 
-PATH=/var/vcap/packages/golang/bin:$PATH
-
-go get -d -v ./... && go build -v ./...
+export GOPATH=$PWD/skydns
+go install github.com/skynetservices/skydns
 
 mkdir $BOSH_INSTALL_TARGET/bin
-mv skydns $BOSH_INSTALL_TARGET/bin
+cp -a $PWD/skydns/bin/skydns ${BOSH_INSTALL_TARGET}/bin

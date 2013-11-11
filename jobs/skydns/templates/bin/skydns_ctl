@@ -11,6 +11,10 @@ case $1 in
   start)
     pid_guard $PIDFILE $JOB_NAME
 
+    echo $$ > $PIDFILE
+
+    mkdir -p /var/vcap/data/sys/log/skydns
+
     # Available flags:
     # -domain - This is the domain requests are anchored to and should be appended to all requests (Defaults to: skydns.local)
     # -http - This is the HTTP ip:port to listen on for API request (Defaults to: 127.0.0.1:8080)
@@ -28,8 +32,6 @@ case $1 in
        >>$LOG_DIR/$JOB_NAME.stdout.log \
        2>>$LOG_DIR/$JOB_NAME.stderr.log
 
-    # store pid in $PIDFILE
-    echo $! > $PIDFILE
     ;;
 
   stop)

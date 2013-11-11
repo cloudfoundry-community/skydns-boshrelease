@@ -1,3 +1,24 @@
-[submodule "src/skydns"]
-	path = src/skydns
+[submodule "src/skydns/src/github.com/skynetservices/skydns"]
+	path = src/skydns/src/github.com/skynetservices/skydns
 	url = https://github.com/skynetservices/skydns.git
+[submodule "src/skydns/src/github.com/goraft/raft"]
+	path = src/skydns/src/github.com/goraft/raft
+	url = https://github.com/goraft/raft.git
+[submodule "src/skydns/src/github.com/gorilla/mux"]
+	path = src/skydns/src/github.com/gorilla/mux
+	url = https://github.com/gorilla/mux.git
+[submodule "src/skydns/src/github.com/miekg/dns"]
+	path = src/skydns/src/github.com/miekg/dns
+	url = https://github.com/miekg/dns.git
+[submodule "src/skydns/src/github.com/rcrowley/go-metrics"]
+	path = src/skydns/src/github.com/rcrowley/go-metrics
+	url = https://github.com/rcrowley/go-metrics.git
+[submodule "src/skydns/src/github.com/stathat/go"]
+	path = src/skydns/src/github.com/stathat/go
+	url = https://github.com/stathat/go.git
+[submodule "src/skydns/src/github.com/gorilla/context"]
+	path = src/skydns/src/github.com/gorilla/context
+	url = https://github.com/gorilla/context.git
+[submodule "src/skydns/src/code.google.com/p/goprotobuf"]
+	path = src/skydns/src/code.google.com/p/goprotobuf
+	url = https://code.google.com/p/gogoprotobuf/
