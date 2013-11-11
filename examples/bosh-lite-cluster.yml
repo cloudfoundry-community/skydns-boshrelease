@@ -1,5 +1,5 @@
 ---
-name: skydns-solo
+name: skydns-cluster
 director_uuid: f2d9ab6e-aa1a-41de-8be2-61dd10243d70
 releases:
 - name: skydns
@@ -18,7 +18,7 @@ update:
 resource_pools:
 - name: common
   network: skydns-network
-  size: 1
+  size: 3
   stemcell:
     name: bosh-stemcell
     version: latest
@@ -55,12 +55,14 @@ networks:
 jobs:
 - name: skydns
   template: skydns
-  instances: 1
+  instances: 3
   resource_pool: common
   networks:
   - name: skydns-network
     static_ips:
     - 10.244.0.6
+    - 10.244.0.10
+    - 10.244.0.14
 properties:
   skydns:
     secret: 0CD82648-3A68-45A5-B1D7-8D4DA2BFCB06
