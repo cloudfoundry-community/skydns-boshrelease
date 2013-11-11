@@ -1,5 +1,24 @@
 # BOSH Release for skydns
 
+
+## Cluster of skydns
+
+```
+# skydns/0
+2013/11/11 06:03:50 Initializing Server. DNS Addr: "0.0.0.0:53", HTTP Addr: "0.0.0.0:8080", Data Dir: "/var/vcap/data/sys/log/skydns"
+2013/11/11 06:03:50 Initializing new cluster
+2013/11/11 06:04:14 Processing incoming join
+2013/11/11 06:04:14 Processing incoming join
+
+# skydns/1
+2013/11/11 06:04:14 Initializing Server. DNS Addr: "0.0.0.0:53", HTTP Addr: "0.0.0.0:8080", Data Dir: "/var/vcap/data/sys/log/skydns"
+2013/11/11 06:04:14 Joining cluster: 10.244.0.6:8080
+2013/11/11 06:04:14 Attempting to connect to: 10.244.0.6:8080
+2013/11/11 06:04:14 Post returned
+2013/11/11 06:04:14 Joined cluster
+```
+
+
 ## Release to your BOSH
 
 To create and upload this release to your BOSH:
