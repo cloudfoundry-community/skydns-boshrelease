@@ -1,0 +1,3 @@
+[submodule "src/sykdns"]
+	path = src/sykdns
+	url = https://github.com/skynetservices/skydns.git
