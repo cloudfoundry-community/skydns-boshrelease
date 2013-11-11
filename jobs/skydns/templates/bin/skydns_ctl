@@ -26,11 +26,24 @@ case $1 in
     # -graphiteServer - When this flag is set to a Graphite Server URL:PORT, metrics will be posted to a graphite server
     # -stathatUser - When this flag is set to a valid StatHat user, metrics will be posted to that user's StatHat account periodically
     # -secret - When this variable is set, the http api will require an authorization header that matches the secret passed to skydns when it starts
-    exec skydns \
-      -data /var/vcap/data/sys/log/skydns \
-      -secret $SKYDNS_SECRET \
-       >>$LOG_DIR/$JOB_NAME.stdout.log \
-       2>>$LOG_DIR/$JOB_NAME.stderr.log
+    if [[ $JOB_INDEX == '0' ]]; then
+      exec skydns \
+        -http 0.0.0.0:8080 \
+        -dns 0.0.0.0:53 \
+        -data /var/vcap/data/sys/log/skydns \
+        -secret $SKYDNS_SECRET \
+         >>$LOG_DIR/$JOB_NAME.stdout.log \
+         2>>$LOG_DIR/$JOB_NAME.stderr.log
+    else
+      exec skydns \
+        -http 0.0.0.0:8080 \
+        -dns 0.0.0.0:53 \
+        -data /var/vcap/data/sys/log/skydns \
+        -join $SKYDNS_INITIAL_HOST \
+        -secret $SKYDNS_SECRET \
+         >>$LOG_DIR/$JOB_NAME.stdout.log \
+         2>>$LOG_DIR/$JOB_NAME.stderr.log
+    fi
 
     ;;
 

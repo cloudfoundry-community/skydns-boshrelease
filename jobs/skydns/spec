@@ -9,6 +9,8 @@ templates:
   helpers/ctl_setup.sh: helpers/ctl_setup.sh
   helpers/ctl_utils.sh: helpers/ctl_utils.sh
 properties:
-  skypdns.secret:
+  skydns.initial_host:
+    description: The host/IP of the initial server in the cluster
+  skydns.secret:
     description: the http api will require an authorization header that matches the secret passed to skydns when it starts
-    default: 'skypdns-boshrelease-secret'
+    default: 'skydns-boshrelease-secret'

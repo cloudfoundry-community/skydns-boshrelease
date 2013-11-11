@@ -65,4 +65,5 @@ jobs:
     - 10.244.0.14
 properties:
   skydns:
+    initial_host: 10.244.0.6
     secret: 0CD82648-3A68-45A5-B1D7-8D4DA2BFCB06
