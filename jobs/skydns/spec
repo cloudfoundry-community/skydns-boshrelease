@@ -9,6 +9,9 @@ templates:
   helpers/ctl_setup.sh: helpers/ctl_setup.sh
   helpers/ctl_utils.sh: helpers/ctl_utils.sh
 properties:
+  skydns.domain:
+    description: This is the domain requests are anchored to and should be appended to all requests
+    default: skydns.microbosh
   skydns.initial_host:
     description: The host/IP of the initial server in the cluster
   skydns.secret:

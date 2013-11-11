@@ -28,6 +28,7 @@ case $1 in
     # -secret - When this variable is set, the http api will require an authorization header that matches the secret passed to skydns when it starts
     if [[ $JOB_INDEX == '0' ]]; then
       exec skydns \
+        -domain $SKYDNS_DOMAIN \
         -http 0.0.0.0:$SKYDNS_HTTP_PORT \
         -dns 0.0.0.0:53 \
         -data /var/vcap/data/sys/log/skydns \
@@ -39,7 +40,8 @@ case $1 in
       rm -rf /var/vcap/data/sys/log/skydns/*
 
       exec skydns \
-        -http 0.0.0.0:8080 \
+        -domain $SKYDNS_DOMAIN \
+        -http 0.0.0.0:$SKYDNS_HTTP_PORT \
         -dns 0.0.0.0:53 \
         -data /var/vcap/data/sys/log/skydns \
         -join $SKYDNS_INITIAL_HOST \
