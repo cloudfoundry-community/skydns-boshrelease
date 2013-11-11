@@ -1,0 +1,36 @@
+---
+packages:
+- name: git
+  version: 1
+  sha1: !binary |-
+    ZmM1MDU3N2Y1MmQ1MWM2NjIyNzA3YjkyMTZlM2EzOTMxN2RhN2FhYQ==
+  fingerprint: !binary |-
+    ZTg1OWMyYjJkM2I3MmQ1NjRmMzUwYTQzOWNjZmIyNjJkZDlhM2E3Mg==
+  dependencies: []
+- name: golang
+  version: 1
+  sha1: !binary |-
+    NTM2OGE0MWIxNzYyYTU4MWQxZDAzNDg4ZjM2NjE5ZjgwNTNhYWQzMQ==
+  fingerprint: !binary |-
+    OTg0Y2UwMzM3NWViMmNlY2JkOTBiNGQ0MmZhODFlODYxNjU4YWY0YQ==
+  dependencies: []
+- name: skydns
+  version: 1
+  sha1: !binary |-
+    ZWVmYThiZjVmN2JjZWNkODVlM2U2ZmYxZTNlZWY4MTY5NTdiYWZhMQ==
+  fingerprint: !binary |-
+    MWU1ZDcxMTAzZDdjMGJlZTc4NGI5MjhhZDU2OWU4NGQyMDk4ZWE5YQ==
+  dependencies:
+  - golang
+  - git
+jobs:
+- name: skydns
+  version: 1
+  fingerprint: !binary |-
+    OTRlYmE4NGU1MDY0MWZiZmYwN2FiMmI0NzlkY2IxYjZiYjBiNTNiOA==
+  sha1: !binary |-
+    MWIyNzNiZDg3ODQ5ZGRhMGI3YTE0OTc0YjRkMmNkYzdkZjdkMDllNw==
+commit_hash: 83cddee4
+uncommitted_changes: true
+name: skydns
+version: 1
