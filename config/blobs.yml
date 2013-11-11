@@ -4,3 +4,8 @@ golang/go1.1.2.linux-amd64-yacc-shaved.tar.gz:
   sha: !binary |-
     MDJhYTlmNDdiOTVjZTAxMmI1NzAyZGFmNDFkM2ZmNGI3ODFhYzMwZQ==
   size: 41768327
+git/git-1.8.4.3.tar.gz:
+  object_id: c5a2af53-f4f5-4bba-bf9d-c1094e1ebf91
+  sha: !binary |-
+    NDNiMWVkYzk1YjNhYjc3Zjk3MzlkNzg5YjkwNmRlZDA1ODVmZTdhMg==
+  size: 4677332
